@@ -10,20 +10,38 @@
 
 @interface ViewController ()
 
+@property (nonatomic, assign) BOOL goingDown;
+@property (weak, nonatomic) IBOutlet UIView *viewBall;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBallY;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.viewBall.clipsToBounds = YES;
+    self.viewBall.layer.cornerRadius = self.viewBall.frame.size.width / 2;
+    
+    [self throwTheBall];
+}
+
+- (void)throwTheBall {
+    CGFloat newY = (self.goingDown ? 40 : 120);
+    self.goingDown = !self.goingDown;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.constraintBallY.constant = newY;
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [self throwTheBall];
+    }];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)freezeTapped:(id)sender {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSThread sleepForTimeInterval:60];
+    });
 }
-
 
 @end
