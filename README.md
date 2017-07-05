@@ -7,3 +7,5 @@ It seems that CLLocationManager uses @synchronized(self) internally, which is an
 This project demonstrates that the app UI freezes for no good reason because of using a CLLocationManager instance in a @synchronized block on a background thread.
 
 P.S. It's not exactly a deadlock in this case, so sorry about a misleading name. We can easily make it a deadlock, though, by adding an instruction to wait for the main thread at the end of the background thread (a perfectly sane thing to do). But for the sake of the demo I simply added a `sleep` on the background thread.
+
+All the relevant code is in ViewController.m.
