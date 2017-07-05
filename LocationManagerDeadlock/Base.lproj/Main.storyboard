@@ -30,14 +30,14 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFJ-v8-8hP">
                                 <rect key="frame" x="157.5" y="218.5" width="60" height="60"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.21164454714977132" green="0.78398276896950703" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2kh-dy-BRw"/>
                                     <constraint firstAttribute="width" constant="60" id="mjT-Pd-5N7"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.8487652895041492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LFJ-v8-8hP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NJF-4c-4Qq"/>
                             <constraint firstItem="dep-Nn-RCR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P1W-20-zfE"/>
