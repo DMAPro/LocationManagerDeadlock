@@ -9,3 +9,6 @@ This project demonstrates that the app UI freezes for no good reason because of 
 P.S. It's not exactly a deadlock in this case, so sorry about a misleading name. We can easily make it a deadlock, though, by adding an instruction to wait for the main thread at the end of the background thread (a perfectly sane thing to do). But for the sake of the demo I simply added a `sleep` on the background thread.
 
 All the relevant code is in ViewController.m.
+
+rdar://33132086
+Copy on OpenRadar: https://openradar.appspot.com/33132086
